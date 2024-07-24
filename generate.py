@@ -31,16 +31,21 @@ payload = {
     "party": ["DMK", "AIADMK", "PMK", "CPI", "CPI(M)", "VCK", "MDMK"],
     "ac_no": 75,
     "pc_no": 13,
-    "year": ["2019", "2024"],
+    "year": [
+        "2016",
+        "2019",
+        "2021",
+        "2024",
+    ],
     "local_body": ["காணை தெற்கு", "காணை வடக்கு"],
     "compare_type": "booth",
 }
 
 COLORS = [
-    "ca_graph_component_blue_bg",
     "ca_graph_component_pink_bg",
-    "ca_graph_component_indigo_bg",
+    "ca_graph_component_blue_bg",
     "ca_graph_component_green_bg",
+    "ca_graph_component_indigo_bg",
 ]
 
 template = env.get_template(
@@ -48,7 +53,8 @@ template = env.get_template(
 )
 
 # with open("response_new.json", "r", encoding="utf-8") as f:
-with open("response.json", "r", encoding="utf-8") as f:
+# with open("response.json", "r", encoding="utf-8") as f:
+with open("response_4_year_truncated.json", "r", encoding="utf-8") as f:
     # with open("response_original.json", "r", encoding="utf-8") as f:
     response_data = json.load(f)
     modelled_data = model_data(response_data=response_data, payload=payload)
