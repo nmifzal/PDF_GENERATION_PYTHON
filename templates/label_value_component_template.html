@@ -23,19 +23,50 @@
   </div>
 
   <div class="section-2-table-body">
-    {% for item in GENDER_DATA %}
     <div class="table-content">
-      <p style="font-weight: 600; margin: auto">{% filter title %} {{item}} {% endfilter %}</p>
+      <p style="font-weight: 600; margin: auto">Male</p>
       <div class="horizontal-divider"></div>
-      <p style="font-weight: 600; margin: auto">{{GENDER_DATA[item] }}</p>
+      <p style="font-weight: 600; margin: auto">{{GENDER_DATA["male"] }}</p>
     </div>
-    {% endfor %} {# #} {# #} {# #} {% for item in AGE_DATA %}
     <div class="table-content">
-      <p style="font-weight: 600; margin: auto">{% filter title %} {{item}} {% endfilter %}</p>
+      <p style="font-weight: 600; margin: auto">Female</p>
       <div class="horizontal-divider"></div>
-      <p style="font-weight: 600; margin: auto">{{AGE_DATA[item] }}</p>
+      <p style="font-weight: 600; margin: auto">{{GENDER_DATA["female"] }}</p>
     </div>
-    {% endfor %}
+    <div class="table-content">
+      <p style="font-weight: 600; margin: auto">Total</p>
+      <div class="horizontal-divider"></div>
+      <p style="font-weight: 600; margin: auto">{{GENDER_DATA["total"] }}</p>
+    </div>
+   
+
+    {# #} {# #} {# #} 
+
+    <div class="table-content">
+      <p style="font-weight: 600; margin: auto">18 - 30</p>
+      <div class="horizontal-divider"></div>
+      <p style="font-weight: 600; margin: auto">{{AGE_DATA["age_18_30"] }}</p>
+    </div>
+    <div class="table-content">
+      <p style="font-weight: 600; margin: auto">31 - 50</p>
+      <div class="horizontal-divider"></div>
+      <p style="font-weight: 600; margin: auto">{{AGE_DATA["age_31_50"] }}</p>
+    </div>
+    <div class="table-content">
+      <p style="font-weight: 600; margin: auto">51 - 80</p>
+      <div class="horizontal-divider"></div>
+      <p style="font-weight: 600; margin: auto">{{AGE_DATA["age_51_80"] }}</p>
+    </div>
+    <div class="table-content">
+      <p style="font-weight: 600; margin: auto">81+</p>
+      <div class="horizontal-divider"></div>
+      <p style="font-weight: 600; margin: auto">{{AGE_DATA["age_81+"] }}</p>
+    </div>
+    <div class="table-content">
+      <p style="font-weight: 600; margin: auto">Total</p>
+      <div class="horizontal-divider"></div>
+      <p style="font-weight: 600; margin: auto">{{AGE_DATA["total_count"] }}</p>
+    </div>
   </div>
 </div>
 {%- endmacro %}
