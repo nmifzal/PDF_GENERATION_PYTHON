@@ -1,0 +1,59 @@
+<head>
+  <meta charset="utf-8" />
+  <!--It is necessary to use the UTF-8 encoding with plotly graphics to get e.g. negative signs to render correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css1.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css2.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css3.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css4.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+</head>
+
+{% macro render(FIG="", TITLE="TEST TITLE", COLOR_CLASS="", IS_FIG_TYPE=False, NON_FIG_TYPE_DATA="") -%}
+<div class="ca_graph_component {{ COLOR_CLASS }}">
+  <div
+    style="
+      background-color: white;
+      height: 90%;
+      width: 100%;
+      border-radius: 15px;
+      margin: auto 0px 0px;
+      box-shadow: lightgrey 0px 0px 3px 1px;
+    "
+  >
+    <div
+      style="
+        background-color: rgb(171, 45, 36);
+        color: white;
+        height: 10%;
+        font-size: 12px;
+        padding: 0px 10px;
+        text-align: center;
+        border-radius: 15px 15px 0px 0px;
+      "
+    >
+      {{TITLE}}
+    </div>
+
+    {% if IS_FIG_TYPE == True %}
+    <div style="height: 90%; padding: 0.5rem">
+      <div style="height: 20%; font-size: 8px">
+        <p style="margin: 0px">வாக்கு பதிவு சதவீதம்: 77.9%</p>
+        <p style="margin: 0px">வாக்கு வித்தியாசம்: 6823</p>
+      </div>
+      <div style="height: 80%">{{ FIG|safe }}</div>
+    </div>
+
+    {% else %}
+    <div style="height: 90%; padding: 0.5rem">
+      <div class="" style="font-size: 10px">{{ NON_FIG_TYPE_DATA|join(', ') }}</div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{%- endmacro %}

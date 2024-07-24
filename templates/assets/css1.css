@@ -1,0 +1,142 @@
+html {
+  font-family: "Noto Sans", "Arima", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+#comparative_analysis_pdf_body .comparative_analysis_pdf_index_page,
+#comparative_analysis_pdf_body .comparative_analysis_pdf_graph_page {
+  padding: 1rem;
+}
+
+/* INDEX PAGE */
+.comparative_analysis_black_bar {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+}
+
+.comparative_analysis_pdf_header {
+  display: flex;
+  margin: 5px 0 1rem;
+  height: 3rem;
+}
+
+.ca_index_table {
+  width: 100%;
+  height: 41rem;
+  border: 1px solid lightgrey;
+  /* border-collapse: collapse; */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: block;
+}
+
+.ca_index_table thead {
+  background: black;
+  color: white;
+  height: 3rem;
+}
+
+.ca_index_table tbody {
+  display: block;
+}
+
+.ca_index_table thead,
+.ca_index_table tbody tr {
+  display: table;
+  width: 100%; /* Ensure full width */
+  table-layout: fixed;
+}
+
+.ca_index_table th {
+  padding: 0 0.6rem;
+  font-size: 10px;
+  text-align: center;
+}
+
+.ca_index_table tr {
+  height: 1rem;
+  margin: 1rem 0;
+  font-size: 14px;
+}
+
+.ca_index_table td {
+  padding: 0 0.6rem;
+  text-align: center;
+}
+
+/* .ca_index_table th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+} */
+/*  */
+/*  */
+/*  */
+
+:root {
+  --graph_container_size: 16rem;
+}
+
+/*  */
+/*  */
+/* GRAPH PAGE */
+.ca_graph_component {
+  height: var(--graph_container_size);
+  width: var(--graph_container_size);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ca_graph_component_blue_bg {
+  background-color: #dcf0f5;
+}
+
+.ca_graph_component_pink_bg {
+  background-color: #f5d5f3;
+}
+
+.ca_graph_component_indigo_bg {
+  background-color: #dfcff0;
+}
+
+.ca_graph_component_green_bg {
+  background-color: #c1f5c6;
+}
+
+.ca_graph_component .ca_graph_component_year_box {
+  position: absolute;
+  left: 40%;
+  top: -0.5rem;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  display: grid;
+  place-content: center;
+}
+/*  */
+/*  */
+/*  */
+
+/* this enables background graphics in print preview */
+* {
+  -webkit-print-color-adjust: exact !important; /* Chrome, Safari 6 – 15.3, Edge */
+  print-color-adjust: exact !important; /* Firefox 97+, Safari 15.4+ */
+}
+
+@media print {
+  @page {
+    /* size: landscape; */
+    size: A4 landscape;
+    margin: 0 !important;
+  }
+}
