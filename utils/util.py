@@ -18,6 +18,7 @@ PARTY_WISE_COLORS = {
 def model_data(response_data=[], payload={}):
     SUMMARY_ITEMS_PER_PAGE = 10
     INDEX_ITEMS_PER_PAGE = 10
+    APPENDIX_ITEMS_PER_PAGE = 10
 
     with open(
         os.path.abspath("utils/ac_number_to_name.json"), "r", encoding="utf-8"
@@ -31,6 +32,7 @@ def model_data(response_data=[], payload={}):
 
     summary_data_pages = []
     index_data_pages = []
+    appendix_data_pages = []
 
     # GET SUMMARY PAGE DATA
     summary_main_data = response_data["summary_data"]
@@ -66,10 +68,31 @@ def model_data(response_data=[], payload={}):
             slice_from = 0
             slice_till = 0 + INDEX_ITEMS_PER_PAGE
 
-            summary_data_pages.append(index_main_data[slice_from:slice_till])
+            index_data_pages.append(index_main_data[slice_from:slice_till])
 
             slice_from = slice_from + INDEX_ITEMS_PER_PAGE
             slice_till = slice_till + INDEX_ITEMS_PER_PAGE
+    #
+    #
+    #
+
+    # GET APPENDIX PAGE DATA
+    appendix_main_data = response_data["appendix"]
+    appendix_data_count = len(appendix_main_data)
+
+    if appendix_data_count < APPENDIX_ITEMS_PER_PAGE:
+        appendix_data_pages.append(appendix_main_data)
+    else:
+        number_of_iterations = math.ceil(appendix_data_count / APPENDIX_ITEMS_PER_PAGE)
+
+        for x in range(number_of_iterations):
+            slice_from = 0
+            slice_till = 0 + APPENDIX_ITEMS_PER_PAGE
+
+            appendix_data_pages.append(appendix_main_data[slice_from:slice_till])
+
+            slice_from = slice_from + APPENDIX_ITEMS_PER_PAGE
+            slice_till = slice_till + APPENDIX_ITEMS_PER_PAGE
     #
     #
     #
@@ -123,6 +146,7 @@ def model_data(response_data=[], payload={}):
         "AC_NAME": AC_NAME,
         "summary_data_pages": summary_data_pages,
         "index_data_pages": index_data_pages,
+        "appendix_data_pages": appendix_data_pages,
         "COMPARE_TYPE": payload.get("compare_type"),
         "graph_data": new_graph_data,
         "YEARS_LIST": YEARS_LIST,

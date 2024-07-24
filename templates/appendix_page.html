@@ -15,28 +15,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 </head>
 
-{% macro render(summary_data_pages=[], AC_NAME="", YEARS_LIST=[]) -%} {% for summary_data in summary_data_pages %}
+{% macro render(appendix_data_pages=[], AC_NAME="", YEARS_LIST=[]) -%} 
+{% for appendix_data in appendix_data_pages %}
 
 <div class="comparative_analysis_pdf_index_page page-break">
   {{ Header.render(PAGE_NO="1", TITLE="{} - வாக்குச் சாவடி நிலையின் பகுப்பாய்வு ஒப்பீடு - {}".format(AC_NAME, ', '.join(YEARS_LIST)), SECOND_TITLE="") }}
 
-  <p style="text-align: center; font-weight: 800">கண்ணோட்டம்</p>
+  <p style="text-align: center; font-weight: 800">பின்குறிப்பு</p>
   <table class="ca_index_table">
     <thead>
-      <th colspan="1">வார்டு எண்</th>
-      <th colspan="3">உள்ளாட்சி அமைப்பு</th>
-      <th colspan="2">உள்ளாட்சி அமைப்பின் வகை</th>
-      <th colspan="3">வாக்குச் சாவடி எண்</th>
-      <th colspan="1">வாக்குச் சாவடி எண்ணிக்கை</th>
+      <th colspan="1">வரிசை எண்</th>
+      <th colspan="2">வாக்குச்சாவடி எண்</th>
+      <th colspan="4">தெருவின் பெயர்</th>
+      <th colspan="2">பக்க எண்</th>
     </thead>
     <tbody>
-      {% for summary_item in summary_data %}
+      {% for appendix_item in appendix_data %}
       <tr style="color: grey">
-        <td colspan="1">{{ summary_item["booth_count"] }}</td>
-        <td colspan="3">{{ summary_item["lb_name"] }}</td>
-        <td colspan="2">{{ summary_item["lb_type"] }}</td>
-        <td colspan="3">{{ ", ".join(summary_item["booth_list"]) }}</td>
-        <td colspan="1">{{ summary_item["booth_count"] }}</td>
+        <td colspan="1">{{ appendix_item["s_no"] }}</td>
+        <td colspan="2">{{ appendix_item["booth_no"] }}</td>
+        <td colspan="4">{{ ", ".join(appendix_item["street_name"]) }}</td>
+        <td colspan="2">{{ appendix_item["page_no"] }}</td>
       </tr>
       {% endfor %}
     </tbody>

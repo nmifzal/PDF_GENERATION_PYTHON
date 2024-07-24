@@ -1,4 +1,7 @@
-{% import 'index_page.html' as IndexPage %} {% import 'graph_page.html' as GraphPage %} {% import 'summary_page.html' as SummaryPage %}
+{% import 'index_page.html' as IndexPage %} 
+{% import 'graph_page.html' as GraphPage %}
+{% import 'summary_page.html' as SummaryPage %}
+{% import 'appendix_page.html' as AppendixPage %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,12 +27,13 @@
   </head>
 
   {# DATA has all the input DATA = { summary_data_pages: , index_data_pages: , graph_data: , AC_NAME: , GRAPH_FORMAT: , } #}
-
+  <!-- appendix_data_pages -->
   <body>
     <div id="comparative_analysis_pdf_body">
-      {{ SummaryPage.render(summary_data_pages=DATA["summary_data_pages"], AC_NAME=DATA["AC_NAME"]) }} {{
-      IndexPage.render(index_data_pages=DATA["index_data_pages"], AC_NAME=DATA["AC_NAME"]) }} {{
-      GraphPage.render(GRAPH_DATA=DATA["graph_data"], AC_NAME=DATA["AC_NAME"], GRAPH_FORMAT=DATA["GRAPH_FORMAT"], COLORS=COLORS) }}
+      {{ SummaryPage.render(summary_data_pages=DATA["summary_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"]) }} 
+      {{ IndexPage.render(index_data_pages=DATA["index_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"]) }} 
+      {{ GraphPage.render(GRAPH_DATA=DATA["graph_data"], AC_NAME=DATA["AC_NAME"], GRAPH_FORMAT=DATA["GRAPH_FORMAT"], COLORS=COLORS) }}
+      {{ AppendixPage.render(appendix_data_pages=DATA["appendix_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"]) }} 
     </div>
   </body>
 </html>
