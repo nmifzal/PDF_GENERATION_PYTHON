@@ -78,6 +78,7 @@ def model_data(response_data=[], payload={}):
     #
     #
     graph_main_data = response_data["graph_data"]
+
     new_graph_data = {}
 
     for item_key in graph_main_data:
