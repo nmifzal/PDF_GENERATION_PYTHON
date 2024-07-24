@@ -40,13 +40,13 @@
     >
       {{ year_iteration["year"] }}
     </div>
-    {% endif %}
+    {% endif %} 
 
     <div style="display: flex; z-index: 10">
-      {{ IndividualGraphItem.render(FIG=year_iteration["fig"],TITLE=LEVEL_NO, COLOR_CLASS=COLORS[loop.index0],IS_FIG_TYPE=True,
+      {{ IndividualGraphItem.render(FIG=year_iteration["fig"],TITLE="{}".format(LEVEL_NO), COLOR_CLASS=COLORS[loop.index0],IS_FIG_TYPE=True,
       NON_FIG_TYPE_DATA=year_iteration["street_names"]) }} 
       
-      {{ IndividualGraphItem.render(FIG=year_iteration["fig"],TITLE=LEVEL_NO,
+      {{ IndividualGraphItem.render(FIG=year_iteration["fig"],TITLE="தெருக்கள்".format(LEVEL_NO),
       COLOR_CLASS=COLORS[loop.index0],IS_FIG_TYPE=False, NON_FIG_TYPE_DATA=year_iteration["street_names"]) }}
     </div>
   </div>

@@ -41,7 +41,8 @@ template = env.get_template(
     "main_template.html",
 )
 
-with open("response.json", "r", encoding="utf-8") as f:
+# with open("response.json", "r", encoding="utf-8") as f:
+with open("response_original.json", "r", encoding="utf-8") as f:
     response_data = json.load(f)
     modelled_data = model_data(response_data=response_data, payload=payload)
 

@@ -87,31 +87,32 @@ def model_data(response_data=[], payload={}):
         booth_pair = []
 
         for idx, (key, value) in enumerate(graph_main_data[item_key].items()):
+            YEAR_WISE_DATA = []
+
+            for year in YEARS_LIST:
+                year_value = value.get(year)
+
+                new_year_data = {
+                    **year_value,
+                    "fig": convert_graph_data_into_fig(
+                        graph_data=year_value["graph_data"]
+                    ),
+                    "year": year,
+                }
+
+                YEAR_WISE_DATA.append(new_year_data)
+
+            booth_pair.append(
+                {
+                    **value,
+                    "booth_no": key,
+                    "year_wise_data": YEAR_WISE_DATA,
+                }
+            )
+
             if idx % 2 == 0:
-                YEAR_WISE_DATA = []
-
-                for year in YEARS_LIST:
-                    year_value = value.get(year)
-
-                    new_year_data = {
-                        **year_value,
-                        "fig": convert_graph_data_into_fig(
-                            graph_data=year_value["graph_data"]
-                        ),
-                        "year": year,
-                    }
-
-                    YEAR_WISE_DATA.append(new_year_data)
-
-                booth_pair.append(
-                    {
-                        **value,
-                        "booth_no": key,
-                        "year_wise_data": YEAR_WISE_DATA,
-                    }
-                )
+                pass
             else:
-                booth_pair.append({**value, "booth_no": key})
                 new_graph_data[item_key].append(booth_pair)
                 booth_pair = []
     #
