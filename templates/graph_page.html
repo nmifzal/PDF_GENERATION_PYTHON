@@ -30,8 +30,8 @@
 
       {% if GRAPH_FORMAT == 2 %}
       <div class="">
-          {{ IndividualGraph2YearContainer.render(YEAR_WISE_DATA=iteration[0]["year_wise_data"], should_display_year=True, COLORS=COLORS, LEVEL_NO=iteration[0]["booth_no"]) }} 
-          {{ IndividualGraph2YearContainer.render(YEAR_WISE_DATA=iteration[1]["year_wise_data"], should_display_year=False, COLORS=COLORS, LEVEL_NO=iteration[1]["booth_no"]) }}
+          {{ IndividualGraph2YearContainer.render(BOOTH_DATA=iteration[0], should_display_year=True, COLORS=COLORS, LEVEL_NO=iteration[0]["booth_no"]) }} 
+          {{ IndividualGraph2YearContainer.render(BOOTH_DATA=iteration[1], should_display_year=False, COLORS=COLORS, LEVEL_NO=iteration[1]["booth_no"]) }}
       </div>
       {% else %}
       <div class="">TEST</div>

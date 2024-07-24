@@ -15,16 +15,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 </head>
 
-{% macro render(YEAR_WISE_DATA=[], should_display_year=True, COLORS=COLORS, LEVEL_NO="") -%}
+{% macro render(BOOTH_DATA={}, should_display_year=True, COLORS=COLORS, LEVEL_NO="") -%}
+
+<div>
+
+{# red bar on top of the component #}
+{% if should_display_year %} <div class="background_dmk_red"  style="height: 7px; width: 100%"></div> {% endif %} 
+
 <div style="display: flex">
 
-  {% for year_iteration in YEAR_WISE_DATA %}
+  {% for year_iteration in BOOTH_DATA["year_wise_data"] %}
   <div style="position: relative">
     {% if should_display_year %}
     <div
       style="
         position: absolute;
-        top: -0.5rem;
+        top: -1rem;
         left: 43%;
         height: 1rem;
         width: 4rem;
@@ -32,7 +38,7 @@
         background-color: black;
         color: white;
         padding: 5px;
-        font-size: 10px;
+        font-size: 12px;
         display: grid;
         place-content: center;
         z-index: 20;
@@ -43,14 +49,16 @@
     {% endif %} 
 
     <div style="display: flex; z-index: 10">
-      {{ IndividualGraphItem.render(FIG=year_iteration["fig"],TITLE="{}".format(LEVEL_NO), COLOR_CLASS=COLORS[loop.index0],IS_FIG_TYPE=True,
-      NON_FIG_TYPE_DATA=year_iteration["street_names"]) }} 
+      {{ IndividualGraphItem.render(FIG=year_iteration["fig"],TITLE="சாவடி எண் - {}".format(LEVEL_NO), COLOR_CLASS=COLORS[loop.index0],IS_FIG_TYPE=True,
+      NON_FIG_TYPE_DATA=year_iteration["street_names"], VILLAGE_PANCHAYAT=BOOTH_DATA["ward_vp"], VOTER_TURNOUT=year_iteration["turnout"], MARGIN_PERCENTAGE=year_iteration["margin_percentage"]) }} 
       
       {{ IndividualGraphItem.render(FIG=year_iteration["fig"],TITLE="தெருக்கள்".format(LEVEL_NO),
-      COLOR_CLASS=COLORS[loop.index0],IS_FIG_TYPE=False, NON_FIG_TYPE_DATA=year_iteration["street_names"]) }}
+      COLOR_CLASS=COLORS[loop.index0],IS_FIG_TYPE=False, NON_FIG_TYPE_DATA=year_iteration["street_names"], VILLAGE_PANCHAYAT="", VOTER_TURNOUT="", MARGIN_PERCENTAGE="") }}
     </div>
   </div>
 
   {% endfor %}
 </div>
+</div>
+
 {%- endmacro %}

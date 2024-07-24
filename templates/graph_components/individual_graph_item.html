@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 </head>
 
-{% macro render(FIG="", TITLE="TEST TITLE", COLOR_CLASS="", IS_FIG_TYPE=False, NON_FIG_TYPE_DATA="") -%}
+{% macro render(FIG="", TITLE="TEST TITLE", COLOR_CLASS="", IS_FIG_TYPE=False, NON_FIG_TYPE_DATA="", VILLAGE_PANCHAYAT="", VOTER_TURNOUT="", MARGIN_PERCENTAGE="") -%}
 <div class="ca_graph_component {{ COLOR_CLASS }}">
   <div
     style="
@@ -45,8 +45,9 @@
     {% if IS_FIG_TYPE == True %}
     <div style="height: 90%; padding: 0.5rem">
       <div style="height: 20%; font-size: 8px">
-        <p style="margin: 0px">வாக்கு பதிவு சதவீதம்: 77.9%</p>
-        <p style="margin: 0px">வாக்கு வித்தியாசம்: 6823</p>
+        <p style="margin: 0px; font-weight: 500">கிராம பஞ்சாயத்து: <span style="font-weight: 700">{{ VILLAGE_PANCHAYAT }}</span></p>
+        <p style="margin: 0px; font-weight: 500">வாக்கு பதிவு சதவீதம்: <span style="font-weight: 700">{{ VOTER_TURNOUT }}</span></p>
+        <p style="margin: 0px; font-weight: 500">வாக்கு வித்தியாசம்: <span style="font-weight: 700">{{ MARGIN_PERCENTAGE }}</span></p>
       </div>
       <div style="height: 80%">{{ FIG|safe }}</div>
     </div>

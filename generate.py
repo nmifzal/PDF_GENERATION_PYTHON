@@ -11,8 +11,14 @@ from jinja2 import (
 import pdfkit
 import math
 from utils.util import model_data
+import time
 
-# path = os.path.abspath("assets/main_template.html")
+
+OUTPUT_FILE_PATH = "templates/output.html"
+
+with open(os.path.abspath(OUTPUT_FILE_PATH), "w") as f:
+    f.write("")
+
 path = os.path.abspath("templates/output.html")
 
 env = Environment(
@@ -41,8 +47,9 @@ template = env.get_template(
     "main_template.html",
 )
 
-# with open("response.json", "r", encoding="utf-8") as f:
-with open("response_original.json", "r", encoding="utf-8") as f:
+# with open("response_new.json", "r", encoding="utf-8") as f:
+with open("response.json", "r", encoding="utf-8") as f:
+    # with open("response_original.json", "r", encoding="utf-8") as f:
     response_data = json.load(f)
     modelled_data = model_data(response_data=response_data, payload=payload)
 
@@ -56,20 +63,26 @@ html = template.render(
 with open("templates/output.html", "w", encoding="utf-8") as f:
     f.write(html)
 
-# # using pdfkit
-config = pdfkit.configuration(
-    wkhtmltopdf="C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
-)
-# pdfkit.from_file(
-#     "templates/output.html",
-#     "pdf_output/sample3.pdf",
-#     configuration=config,
-#     options={"enable-local-file-access": ""},
+# # # using pdfkit
+# config = pdfkit.configuration(
+#     wkhtmltopdf="C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
 # )
+# # pdfkit.from_file(
+# #     "templates/output.html",
+# #     "pdf_output/sample3.pdf",
+# #     configuration=config,
+# #     options={"enable-local-file-access": ""},
+# # )
 
-# using pyhtml2pdf
+# # using pyhtml2pdf
 converter.convert(
-    f"file:///{path}",
+    f"file:///{os.path.abspath(OUTPUT_FILE_PATH)}",
     "pdf_output/sample3.pdf",
     print_options={"preferCSSPageSize": True, "printBackground": True},
 )
+
+# time.sleep(3)
+if os.path.exists(OUTPUT_FILE_PATH):
+    os.remove(OUTPUT_FILE_PATH)
+else:
+    print("The file does not exist")

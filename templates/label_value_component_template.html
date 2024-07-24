@@ -15,7 +15,12 @@
 
 {% macro render(GENDER_DATA={}, AGE_DATA={}, number="") -%}
 <div class="count-table">
-  <div class="section-2-table-header"><p style="text-align: center">{{number}}</p></div>
+  <div class="section-2-table-header">
+    <p style="text-align: center; font-weight: 500; font-size: 10px;">
+      சாவடி அமைப்பின் பாலினம் மற்றும் வயது குழுக்கள் - 
+      <span style="font-weight: 800; font-size: 12px;">{{ number }}</span>
+    </p>
+  </div>
 
   <div class="section-2-table-body">
     {% for item in GENDER_DATA %}
