@@ -15,10 +15,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 </head>
 
-{% macro render(index_data_pages=[], AC_NAME="", YEARS_LIST=[]) -%} {% for index_data in index_data_pages %}
+{% macro render(index_data_pages=[], AC_NAME="", YEARS_LIST=[],HEADER="") -%} {% for index_data in index_data_pages %}
 
 <div class="comparative_analysis_pdf_index_page page-break">
-  {{ Header.render(PAGE_NO="1", TITLE="{} - வாக்குச் சாவடி நிலையின் பகுப்பாய்வு ஒப்பீடு - {}".format(AC_NAME, ', '.join(YEARS_LIST)), SECOND_TITLE="") }}
+  {{ Header.render(PAGE_NO="1", TITLE=HEADER, SECOND_TITLE="") }}
 
   <p style="text-align: center; font-weight: 800">Index</p>
   <table class="ca_index_table">

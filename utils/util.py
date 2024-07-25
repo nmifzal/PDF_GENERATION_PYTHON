@@ -31,6 +31,9 @@ def model_data(response_data=[], payload={}):
     AC_NAME = ac_number_to_name["ta"][str(AC_NO)]
     YEARS_LIST = payload.get("year", [])
     GRAPH_FORMAT = len(YEARS_LIST)
+    header = "{}.{} - வாக்குச் சாவடி நிலையின் பகுப்பாய்வு ஒப்பீடு - {}".format(
+        AC_NO, AC_NAME, ", ".join(YEARS_LIST)
+    )
 
     summary_data_pages = []
     index_data_pages = []
@@ -145,7 +148,9 @@ def model_data(response_data=[], payload={}):
     #
 
     return {
+        "HEADER": header,
         "AC_NAME": AC_NAME,
+        "AC_NO": AC_NO,
         "summary_data_pages": summary_data_pages,
         "index_data_pages": index_data_pages,
         "appendix_data_pages": appendix_data_pages,

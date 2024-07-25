@@ -13,8 +13,7 @@ import math
 from utils.util import model_data
 import time
 import timeit
-
-# from weasyprint import HTML
+from weasyprint import HTML
 
 
 def generate_pdf():
@@ -36,16 +35,16 @@ def generate_pdf():
         "party": ["DMK", "AIADMK", "PMK", "CPI", "CPI(M)", "VCK", "MDMK"],
         "ac_no": 75,
         "pc_no": 13,
-        # "year": [
-        #     "2016",
-        #     "2024",
-        # ],
         "year": [
             "2016",
-            "2019",
-            "2021",
             "2024",
         ],
+        # "year": [
+        #     "2016",
+        #     "2019",
+        #     "2021",
+        #     "2024",
+        # ],
         "local_body": ["காணை தெற்கு", "காணை வடக்கு"],
         "compare_type": "booth",
     }
@@ -62,9 +61,9 @@ def generate_pdf():
     )
 
     # with open("response_2_year_original.json", "r", encoding="utf-8") as f:
-    # with open("response_2_year_truncated.json", "r", encoding="utf-8") as f:
-    # with open("response_4_year_original.json", "r", encoding="utf-8") as f:
-    with open("response_4_year_truncated.json", "r", encoding="utf-8") as f:
+    with open("response_2_year_truncated.json", "r", encoding="utf-8") as f:
+        # with open("response_4_year_original.json", "r", encoding="utf-8") as f:
+        # with open("response_4_year_truncated.json", "r", encoding="utf-8") as f:
         response_data = json.load(f)
         modelled_data = model_data(response_data=response_data, payload=payload)
 

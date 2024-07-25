@@ -30,10 +30,10 @@
   <!-- appendix_data_pages -->
   <body>
     <div id="comparative_analysis_pdf_body">
-      {{ SummaryPage.render(summary_data_pages=DATA["summary_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"]) }} 
-      {{ IndexPage.render(index_data_pages=DATA["index_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"]) }} 
-      {{ GraphPage.render(GRAPH_DATA=DATA["graph_data"], AC_NAME=DATA["AC_NAME"], GRAPH_FORMAT=DATA["GRAPH_FORMAT"], COLORS=COLORS, YEARS_LIST=DATA["YEARS_LIST"]) }}
-      {{ AppendixPage.render(appendix_data_pages=DATA["appendix_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"]) }} 
+      {{ SummaryPage.render(summary_data_pages=DATA["summary_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }} 
+      {{ IndexPage.render(index_data_pages=DATA["index_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }} 
+      {{ GraphPage.render(GRAPH_DATA=DATA["graph_data"], AC_NAME=DATA["AC_NAME"], GRAPH_FORMAT=DATA["GRAPH_FORMAT"], COLORS=COLORS, YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }}
+      {{ AppendixPage.render(appendix_data_pages=DATA["appendix_data_pages"], AC_NAME=DATA["AC_NAME"],  YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }} 
     </div>
   </body>
 </html>
