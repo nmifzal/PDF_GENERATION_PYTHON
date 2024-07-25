@@ -13,7 +13,6 @@ import math
 from utils.util import model_data
 import time
 import timeit
-from weasyprint import HTML
 
 
 def generate_pdf():
@@ -23,7 +22,7 @@ def generate_pdf():
     with open(os.path.abspath(OUTPUT_FILE_PATH), "w") as f:
         f.write("")
 
-    path = os.path.abspath("templates/output.html")
+    path = os.path.abspath(OUTPUT_FILE_PATH)
 
     env = Environment(
         loader=FileSystemLoader("templates", encoding="utf-8"),
@@ -60,10 +59,12 @@ def generate_pdf():
         "main_template.html",
     )
 
-    # with open("response_2_year_original.json", "r", encoding="utf-8") as f:
-    with open("response_2_year_truncated.json", "r", encoding="utf-8") as f:
-        # with open("response_4_year_original.json", "r", encoding="utf-8") as f:
-        # with open("response_4_year_truncated.json", "r", encoding="utf-8") as f:
+    # response_json = "response_2_year_original.json"
+    response_json = "response_2_year_truncated.json"
+    # response_json = "response_4_year_original.json"
+    # response_json = "response_4_year_truncated.json"
+
+    with open(response_json, "r", encoding="utf-8") as f:
         response_data = json.load(f)
         modelled_data = model_data(response_data=response_data, payload=payload)
 
@@ -73,7 +74,7 @@ def generate_pdf():
     )
 
     # to save the results
-    with open("templates/output.html", "w", encoding="utf-8") as f:
+    with open(OUTPUT_FILE_PATH, "w", encoding="utf-8") as f:
         f.write(html)
 
     # # # using pdfkit
@@ -98,10 +99,6 @@ def generate_pdf():
         OUTPUT_PDF_PATH,
         print_options={"preferCSSPageSize": True, "printBackground": True},
     )
-
-    # Load the HTML file
-    # html = HTML(filename=OUTPUT_FILE_PATH)
-    # html.write_pdf(OUTPUT_PDF_PATH)
 
     # time.sleep(3)
     # delete the output html file as it is not necessary after pdf is created
