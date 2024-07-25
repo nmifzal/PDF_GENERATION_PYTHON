@@ -34,16 +34,16 @@ def generate_pdf():
         "party": ["DMK", "AIADMK", "PMK", "CPI", "CPI(M)", "VCK", "MDMK"],
         "ac_no": 75,
         "pc_no": 13,
-        "year": [
-            "2016",
-            "2024",
-        ],
         # "year": [
         #     "2016",
-        #     "2019",
-        #     "2021",
         #     "2024",
         # ],
+        "year": [
+            "2016",
+            "2019",
+            "2021",
+            "2024",
+        ],
         "local_body": ["காணை தெற்கு", "காணை வடக்கு"],
         "compare_type": "booth",
     }
@@ -60,8 +60,8 @@ def generate_pdf():
     )
 
     # response_json = "response_2_year_original.json"
-    response_json = "response_2_year_truncated.json"
-    # response_json = "response_4_year_original.json"
+    # response_json = "response_2_year_truncated.json"
+    response_json = "response_4_year_original.json"
     # response_json = "response_4_year_truncated.json"
 
     with open(response_json, "r", encoding="utf-8") as f:
@@ -99,6 +99,13 @@ def generate_pdf():
         OUTPUT_PDF_PATH,
         print_options={"preferCSSPageSize": True, "printBackground": True},
     )
+
+    # with open(os.path.abspath("Report.pdf"), "rb") as pdf_file:
+    #     encoded_string = pdf_file.read()
+
+    # return func.HttpResponse(
+    #     encoded_string, mimetype="application/pdf", status_code=200
+    # )
 
     # time.sleep(3)
     # delete the output html file as it is not necessary after pdf is created
