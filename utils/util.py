@@ -8,10 +8,12 @@ dmk_red_color = "#ab2d24"
 
 PARTY_WISE_COLORS = {
     "DMK": "#ab2d24",
-    "VCK": "#f7e048",
+    "VCK": "#0961b3",
+    "BJP": "#e87007",
     "AIADMK": "#215e1b",
-    "Others": "#0460e0",
-    "PMK": "#f57ddf",
+    "PMK": "#d9ce09",
+    "NTK": "#141210",
+    "Others": "#b3b4b5",
 }
 
 
@@ -161,7 +163,7 @@ def convert_graph_data_into_fig(graph_data):
     y_axis = graph_data["y"]
 
     df = pd.DataFrame({"parties": x_axis, "votes": y_axis})
-    figure = px.bar(df, x="parties", y="votes")
+    figure = px.bar(df, x="parties", y="votes", text_auto=True)
 
     figure.update_layout(
         {
@@ -188,6 +190,6 @@ def convert_graph_data_into_fig(graph_data):
     else:
         marker_color = [PARTY_WISE_COLORS.get(party, dmk_red_color) for party in x_axis]
 
-    figure.update_traces(marker_color=marker_color, textposition="outside")
+    figure.update_traces(marker_color=marker_color, textposition="auto")
 
     return figure.to_html(full_html=False)

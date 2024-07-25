@@ -18,11 +18,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 </head>
 
-{% macro render(GRAPH_DATA={}, AC_NAME="", GRAPH_FORMAT=2, COLORS=COLORS) -%} 
+{% macro render(GRAPH_DATA={}, AC_NAME="", GRAPH_FORMAT=2, COLORS=COLORS, YEARS_LIST=[]) -%} 
 {% for KEY in GRAPH_DATA %} 
 {% for iteration in GRAPH_DATA[KEY] %}
   <div class="comparative_analysis_pdf_graph_page page-break">
-    {{ Header.render(PAGE_NO="1", TITLE=AC_NAME, SECOND_TITLE="") }}
+    {{ Header.render(PAGE_NO="1", TITLE="{} - வாக்குச் சாவடி நிலையின் பகுப்பாய்வு ஒப்பீடு - {}".format(AC_NAME, ', '.join(YEARS_LIST)), SECOND_TITLE="") }}
 
     <div style="display: flex; gap: 1rem">
       {{ LabelValueComponent.render(GENDER_DATA=iteration[0]["gender_stats"], AGE_DATA=iteration[0]["age_stats"], number=iteration[0]["booth_no"]) }} {# #} {# #} {# #} 

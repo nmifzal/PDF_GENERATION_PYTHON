@@ -18041,6 +18041,27 @@
         },
         "ward_vp": "கோழிப்பட்டு",
         "trend": null,
+        "2016": {
+          "booth_no": 61,
+          "street_names": [
+            "மெயின் ரோடு",
+            "சேக்கிழார் தெரு",
+            "புதுத்தெரு",
+            "பாரதி தெரு",
+            "திருவள்ளுவர் தெரு",
+            "கம்பன் தெரு",
+            "பிள்ளையார் கோயில் தெரு",
+            "அண்ணா நகர்"
+          ],
+          "street_count": 8,
+          "turnout": 0.0,
+          "margin": 428,
+          "margin_percentage": 11.16,
+          "graph_data": {
+            "x": ["PMK", "AIADMK", "DMK", "Others"],
+            "y": [394, 228, 224, 56]
+          }
+        },
         "2019": {
           "booth_no": 61,
           "street_names": [
@@ -18058,8 +18079,8 @@
           "margin": 0,
           "margin_percentage": -0.0,
           "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "Others", "VCK"],
-            "y": [1301, 1300, 700, 312, 221]
+            "x": ["PMK", "Others", "DMK"],
+            "y": [656, 161, 139]
           }
         },
         "2021": {
@@ -18079,29 +18100,8 @@
           "margin": 60,
           "margin_percentage": 1.56,
           "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "Others", "VCK"],
-            "y": [1301, 1300, 700, 312, 221]
-          }
-        },
-        "2016": {
-          "booth_no": 61,
-          "street_names": [
-            "மெயின் ரோடு",
-            "சேக்கிழார் தெரு",
-            "புதுத்தெரு",
-            "பாரதி தெரு",
-            "திருவள்ளுவர் தெரு",
-            "கம்பன் தெரு",
-            "பிள்ளையார் கோயில் தெரு",
-            "அண்ணா நகர்"
-          ],
-          "street_count": 8,
-          "turnout": 0.0,
-          "margin": 428,
-          "margin_percentage": 11.16,
-          "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "Others", "VCK"],
-            "y": [1301, 1300, 700, 312, 221]
+            "x": ["AIADMK", "DMK", "Others"],
+            "y": [596, 337, 64]
           }
         },
         "2024": {
@@ -18121,8 +18121,8 @@
           "margin": 179,
           "margin_percentage": 4.67,
           "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "Others", "VCK"],
-            "y": [1301, 1300, 700, 312, 221]
+            "x": ["AIADMK", "PMK", "VCK", "Others"],
+            "y": [477, 250, 221, 31]
           }
         },
         "page_no": 3
@@ -18149,6 +18149,18 @@
         },
         "ward_vp": "கோழிப்பட்டு",
         "trend": null,
+        "2016": {
+          "booth_no": 62,
+          "street_names": ["காலனி மாரியம்மன் கோயில் தெரு", "காந்தி தெரு", "நேருஜி தெரு", "அம்பேத்கார் தெரு", "காலனி மெயின் ரோடு"],
+          "street_count": 5,
+          "turnout": 0.0,
+          "margin": 140,
+          "margin_percentage": 6.26,
+          "graph_data": {
+            "x": ["DMK", "AIADMK", "Others", "PMK"],
+            "y": [259, 187, 64, 13]
+          }
+        },
         "2019": {
           "booth_no": 62,
           "street_names": ["காலனி மாரியம்மன் கோயில் தெரு", "காந்தி தெரு", "நேருஜி தெரு", "அம்பேத்கார் தெரு", "காலனி மெயின் ரோடு"],
@@ -18157,8 +18169,8 @@
           "margin": 0,
           "margin_percentage": -0.0,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "VCK", "Others", "PMK"],
-            "y": [1028, 499, 378, 254, 77]
+            "x": ["DMK", "Others", "PMK"],
+            "y": [399, 77, 55]
           }
         },
         "2021": {
@@ -18169,20 +18181,8 @@
           "margin": 29,
           "margin_percentage": 1.3,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "VCK", "Others", "PMK"],
-            "y": [1028, 499, 378, 254, 77]
-          }
-        },
-        "2016": {
-          "booth_no": 62,
-          "street_names": ["காலனி மாரியம்மன் கோயில் தெரு", "காந்தி தெரு", "நேருஜி தெரு", "அம்பேத்கார் தெரு", "காலனி மெயின் ரோடு"],
-          "street_count": 5,
-          "turnout": 0.0,
-          "margin": 140,
-          "margin_percentage": 6.26,
-          "graph_data": {
-            "x": ["DMK", "AIADMK", "VCK", "Others", "PMK"],
-            "y": [1028, 499, 378, 254, 77]
+            "x": ["DMK", "AIADMK", "Others"],
+            "y": [370, 158, 66]
           }
         },
         "2024": {
@@ -18193,8 +18193,8 @@
           "margin": 21,
           "margin_percentage": 0.94,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "VCK", "Others", "PMK"],
-            "y": [1028, 499, 378, 254, 77]
+            "x": ["VCK", "AIADMK", "Others", "PMK"],
+            "y": [378, 154, 47, 9]
           }
         },
         "page_no": 3
@@ -18221,6 +18221,27 @@
         },
         "ward_vp": "மல்லிகைப்பட்டு",
         "trend": null,
+        "2016": {
+          "booth_no": 63,
+          "street_names": [
+            "மெயின் ரோடு",
+            "விநாயகர் கோயில் தெரு",
+            "பெருமாள் கோயில் தெரு",
+            "விநாயகர் கோயில் பின்புறத் தெரு",
+            "அண்ணாநகர் தெரு",
+            "குளக்கரை(ம)பள்ளிகூடத் தெரு",
+            "மேற்கு தெரு",
+            "புதுத் தெரு"
+          ],
+          "street_count": 8,
+          "turnout": 0.0,
+          "margin": 235,
+          "margin_percentage": 6.58,
+          "graph_data": {
+            "x": ["DMK", "PMK", "AIADMK", "Others"],
+            "y": [292, 280, 254, 50]
+          }
+        },
         "2019": {
           "booth_no": 63,
           "street_names": [
@@ -18238,8 +18259,8 @@
           "margin": 0,
           "margin_percentage": -0.0,
           "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "VCK", "Others"],
-            "y": [1167, 1014, 926, 235, 232]
+            "x": ["PMK", "DMK", "Others"],
+            "y": [527, 242, 90]
           }
         },
         "2021": {
@@ -18259,29 +18280,8 @@
           "margin": 21,
           "margin_percentage": 0.59,
           "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "VCK", "Others"],
-            "y": [1167, 1014, 926, 235, 232]
-          }
-        },
-        "2016": {
-          "booth_no": 63,
-          "street_names": [
-            "மெயின் ரோடு",
-            "விநாயகர் கோயில் தெரு",
-            "பெருமாள் கோயில் தெரு",
-            "விநாயகர் கோயில் பின்புறத் தெரு",
-            "அண்ணாநகர் தெரு",
-            "குளக்கரை(ம)பள்ளிகூடத் தெரு",
-            "மேற்கு தெரு",
-            "புதுத் தெரு"
-          ],
-          "street_count": 8,
-          "turnout": 0.0,
-          "margin": 235,
-          "margin_percentage": 6.58,
-          "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "VCK", "Others"],
-            "y": [1167, 1014, 926, 235, 232]
+            "x": ["AIADMK", "DMK", "Others"],
+            "y": [506, 392, 41]
           }
         },
         "2024": {
@@ -18301,8 +18301,8 @@
           "margin": 120,
           "margin_percentage": 3.36,
           "graph_data": {
-            "x": ["AIADMK", "PMK", "DMK", "VCK", "Others"],
-            "y": [1167, 1014, 926, 235, 232]
+            "x": ["AIADMK", "VCK", "PMK", "Others"],
+            "y": [407, 235, 207, 51]
           }
         },
         "page_no": 4
@@ -18329,6 +18329,18 @@
         },
         "ward_vp": "மாம்பழப்பட்டு",
         "trend": null,
+        "2016": {
+          "booth_no": 64,
+          "street_names": ["பஜனை கோயில் தெரு", "ரெட்டியார் தெரு", "நடுத் தெரு", "மெயின் ரோடு", "மாரியம்மன் கோயில் தெரு"],
+          "street_count": 5,
+          "turnout": 0.0,
+          "margin": 65,
+          "margin_percentage": 2.62,
+          "graph_data": {
+            "x": ["AIADMK", "DMK", "PMK", "Others"],
+            "y": [234, 233, 84, 62]
+          }
+        },
         "2019": {
           "booth_no": 64,
           "street_names": ["பஜனை கோயில் தெரு", "ரெட்டியார் தெரு", "நடுத் தெரு", "மெயின் ரோடு", "மாரியம்மன் கோயில் தெரு"],
@@ -18337,8 +18349,8 @@
           "margin": 8,
           "margin_percentage": 0.32,
           "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [810, 771, 436, 252, 212]
+            "x": ["PMK", "DMK", "Others"],
+            "y": [291, 247, 80]
           }
         },
         "2021": {
@@ -18349,20 +18361,8 @@
           "margin": 8,
           "margin_percentage": 0.32,
           "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [810, 771, 436, 252, 212]
-          }
-        },
-        "2016": {
-          "booth_no": 64,
-          "street_names": ["பஜனை கோயில் தெரு", "ரெட்டியார் தெரு", "நடுத் தெரு", "மெயின் ரோடு", "மாரியம்மன் கோயில் தெரு"],
-          "street_count": 5,
-          "turnout": 0.0,
-          "margin": 65,
-          "margin_percentage": 2.62,
-          "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [810, 771, 436, 252, 212]
+            "x": ["DMK", "AIADMK", "Others"],
+            "y": [291, 277, 70]
           }
         },
         "2024": {
@@ -18373,8 +18373,8 @@
           "margin": 0,
           "margin_percentage": -0.0,
           "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [810, 771, 436, 252, 212]
+            "x": ["AIADMK", "VCK", "PMK", "Others"],
+            "y": [299, 212, 61, 40]
           }
         },
         "page_no": 4
@@ -18403,6 +18403,27 @@
         },
         "ward_vp": "நல்லாபாளையம்",
         "trend": null,
+        "2016": {
+          "booth_no": 1,
+          "street_names": [
+            "தேன்கல் மேடு",
+            "இருளர் காலனி",
+            "காளியம்மன் கோயில் தெரு",
+            "வடக்கு தெரு",
+            "முத்துமாரியம்மன் கோயில் தெரு",
+            "காலனி நடுத் தெரு",
+            "கெங்கையம்மன் கோயில் தெரு",
+            "சொசைட்டி தெரு"
+          ],
+          "street_count": 8,
+          "turnout": 0.0,
+          "margin": 90,
+          "margin_percentage": 3.48,
+          "graph_data": {
+            "x": ["AIADMK", "DMK", "Others", "PMK"],
+            "y": [250, 164, 74, 29]
+          }
+        },
         "2019": {
           "booth_no": 1,
           "street_names": [
@@ -18420,8 +18441,8 @@
           "margin": 0,
           "margin_percentage": -0.0,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "Others", "VCK", "PMK"],
-            "y": [842, 700, 487, 335, 223]
+            "x": ["DMK", "Others", "PMK"],
+            "y": [340, 220, 132]
           }
         },
         "2021": {
@@ -18441,29 +18462,8 @@
           "margin": 2,
           "margin_percentage": 0.08,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "Others", "VCK", "PMK"],
-            "y": [842, 700, 487, 335, 223]
-          }
-        },
-        "2016": {
-          "booth_no": 1,
-          "street_names": [
-            "தேன்கல் மேடு",
-            "இருளர் காலனி",
-            "காளியம்மன் கோயில் தெரு",
-            "வடக்கு தெரு",
-            "முத்துமாரியம்மன் கோயில் தெரு",
-            "காலனி நடுத் தெரு",
-            "கெங்கையம்மன் கோயில் தெரு",
-            "சொசைட்டி தெரு"
-          ],
-          "street_count": 8,
-          "turnout": 0.0,
-          "margin": 90,
-          "margin_percentage": 3.48,
-          "graph_data": {
-            "x": ["DMK", "AIADMK", "Others", "VCK", "PMK"],
-            "y": [842, 700, 487, 335, 223]
+            "x": ["DMK", "AIADMK", "Others"],
+            "y": [338, 270, 101]
           }
         },
         "2024": {
@@ -18483,8 +18483,8 @@
           "margin": 5,
           "margin_percentage": 0.19,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "Others", "VCK", "PMK"],
-            "y": [842, 700, 487, 335, 223]
+            "x": ["VCK", "AIADMK", "Others", "PMK"],
+            "y": [335, 180, 92, 62]
           }
         },
         "page_no": 20
@@ -18511,6 +18511,18 @@
         },
         "ward_vp": "நல்லாபாளையம்",
         "trend": null,
+        "2016": {
+          "booth_no": 2,
+          "street_names": ["பாடசாலைத் தெரு", "வெள்ளக்குத்து பாறை தெரு", "காமன் கோயில் தெரு சந்து", "காமன் கோயில் தெரு", "மேட்டு தெரு"],
+          "street_count": 5,
+          "turnout": 0.0,
+          "margin": 116,
+          "margin_percentage": 4.38,
+          "graph_data": {
+            "x": ["Others", "DMK", "PMK", "AIADMK"],
+            "y": [268, 239, 191, 148]
+          }
+        },
         "2019": {
           "booth_no": 2,
           "street_names": ["பாடசாலைத் தெரு", "வெள்ளக்குத்து பாறை தெரு", "காமன் கோயில் தெரு சந்து", "காமன் கோயில் தெரு", "மேட்டு தெரு"],
@@ -18519,8 +18531,8 @@
           "margin": 54,
           "margin_percentage": 2.04,
           "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [704, 703, 618, 449, 174]
+            "x": ["PMK", "DMK", "Others"],
+            "y": [301, 212, 103]
           }
         },
         "2021": {
@@ -18531,20 +18543,8 @@
           "margin": 0,
           "margin_percentage": -0.0,
           "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [704, 703, 618, 449, 174]
-          }
-        },
-        "2016": {
-          "booth_no": 2,
-          "street_names": ["பாடசாலைத் தெரு", "வெள்ளக்குத்து பாறை தெரு", "காமன் கோயில் தெரு சந்து", "காமன் கோயில் தெரு", "மேட்டு தெரு"],
-          "street_count": 5,
-          "turnout": 0.0,
-          "margin": 116,
-          "margin_percentage": 4.38,
-          "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [704, 703, 618, 449, 174]
+            "x": ["AIADMK", "DMK", "Others"],
+            "y": [355, 252, 32]
           }
         },
         "2024": {
@@ -18555,8 +18555,8 @@
           "margin": 154,
           "margin_percentage": 5.82,
           "graph_data": {
-            "x": ["AIADMK", "DMK", "PMK", "Others", "VCK"],
-            "y": [704, 703, 618, 449, 174]
+            "x": ["AIADMK", "VCK", "PMK", "Others"],
+            "y": [201, 174, 126, 46]
           }
         },
         "page_no": 20
@@ -18583,6 +18583,18 @@
         },
         "ward_vp": "நல்லாபாளையம்",
         "trend": null,
+        "2016": {
+          "booth_no": 3,
+          "street_names": ["குளத்து தெரு", "நடுத் தெரு", "மாரியம்மன் கோயில் தெரு", "அய்யனார் கோயில் தெரு", "பஜனை கோவில் தெரு"],
+          "street_count": 5,
+          "turnout": 0.0,
+          "margin": 9,
+          "margin_percentage": 0.41,
+          "graph_data": {
+            "x": ["DMK", "AIADMK", "PMK", "Others"],
+            "y": [269, 170, 146, 35]
+          }
+        },
         "2019": {
           "booth_no": 3,
           "street_names": ["குளத்து தெரு", "நடுத் தெரு", "மாரியம்மன் கோயில் தெரு", "அய்யனார் கோயில் தெரு", "பஜனை கோவில் தெரு"],
@@ -18591,8 +18603,8 @@
           "margin": 51,
           "margin_percentage": 2.33,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "Others", "VCK"],
-            "y": [671, 644, 516, 200, 161]
+            "x": ["PMK", "DMK", "Others"],
+            "y": [227, 185, 81]
           }
         },
         "2021": {
@@ -18603,20 +18615,8 @@
           "margin": 0,
           "margin_percentage": -0.0,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "Others", "VCK"],
-            "y": [671, 644, 516, 200, 161]
-          }
-        },
-        "2016": {
-          "booth_no": 3,
-          "street_names": ["குளத்து தெரு", "நடுத் தெரு", "மாரியம்மன் கோயில் தெரு", "அய்யனார் கோயில் தெரு", "பஜனை கோவில் தெரு"],
-          "street_count": 5,
-          "turnout": 0.0,
-          "margin": 9,
-          "margin_percentage": 0.41,
-          "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "Others", "VCK"],
-            "y": [671, 644, 516, 200, 161]
+            "x": ["AIADMK", "DMK", "Others"],
+            "y": [278, 217, 38]
           }
         },
         "2024": {
@@ -18627,8 +18627,8 @@
           "margin": 82,
           "margin_percentage": 3.74,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "Others", "VCK"],
-            "y": [671, 644, 516, 200, 161]
+            "x": ["AIADMK", "VCK", "PMK", "Others"],
+            "y": [196, 161, 143, 46]
           }
         },
         "page_no": 21
@@ -18655,6 +18655,18 @@
         },
         "ward_vp": "நல்லாபாளையம்",
         "trend": null,
+        "2016": {
+          "booth_no": 4,
+          "street_names": ["நேதாஜி தெரு", "கிழக்கு தெரு", "புது தெரு மேடு", "புது தெரு", "ரோட்டுத் தெரு"],
+          "street_count": 5,
+          "turnout": 0.0,
+          "margin": 0,
+          "margin_percentage": -0.0,
+          "graph_data": {
+            "x": ["DMK", "PMK", "AIADMK", "Others"],
+            "y": [318, 109, 97, 41]
+          }
+        },
         "2019": {
           "booth_no": 4,
           "street_names": ["நேதாஜி தெரு", "கிழக்கு தெரு", "புது தெரு மேடு", "புது தெரு", "ரோட்டுத் தெரு"],
@@ -18663,8 +18675,8 @@
           "margin": 26,
           "margin_percentage": 1.11,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "VCK", "Others"],
-            "y": [902, 572, 423, 225, 212]
+            "x": ["DMK", "PMK", "Others"],
+            "y": [292, 195, 69]
           }
         },
         "2021": {
@@ -18675,20 +18687,8 @@
           "margin": 26,
           "margin_percentage": 1.11,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "VCK", "Others"],
-            "y": [902, 572, 423, 225, 212]
-          }
-        },
-        "2016": {
-          "booth_no": 4,
-          "street_names": ["நேதாஜி தெரு", "கிழக்கு தெரு", "புது தெரு மேடு", "புது தெரு", "ரோட்டுத் தெரு"],
-          "street_count": 5,
-          "turnout": 0.0,
-          "margin": 0,
-          "margin_percentage": -0.0,
-          "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "VCK", "Others"],
-            "y": [902, 572, 423, 225, 212]
+            "x": ["DMK", "AIADMK", "Others"],
+            "y": [292, 284, 36]
           }
         },
         "2024": {
@@ -18699,8 +18699,8 @@
           "margin": 93,
           "margin_percentage": 3.98,
           "graph_data": {
-            "x": ["DMK", "AIADMK", "PMK", "VCK", "Others"],
-            "y": [902, 572, 423, 225, 212]
+            "x": ["VCK", "AIADMK", "PMK", "Others"],
+            "y": [225, 191, 119, 66]
           }
         },
         "page_no": 21
