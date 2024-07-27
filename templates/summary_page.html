@@ -12,10 +12,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
-{% macro render(summary_data_pages=[], AC_NAME="", YEARS_LIST=[], HEADER="") -%} {% for summary_data in summary_data_pages %}
+{% for summary_data in summary_data_pages %}
 
 <div class="comparative_analysis_pdf_index_page page-break">
   {{ Header.render(PAGE_NO="1", TITLE=HEADER, SECOND_TITLE="") }}
@@ -40,4 +43,4 @@
     </tbody>
   </table>
 </div>
-{% endfor %} {%- endmacro %}
+{% endfor %}

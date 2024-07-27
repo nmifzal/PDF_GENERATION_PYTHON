@@ -1,7 +1,9 @@
-{% import 'header_template.html' as Header %} 
-{% import 'label_value_component_template.html' as LabelValueComponent %} 
-{% import 'graph_components/Individual_graph_2_year_container.html' as IndividualGraph2YearContainer %} 
-{% import 'graph_components/Individual_graph_4_year_container.html' as IndividualGraph4YearContainer %}
+{% import 'header_template.html' as Header %} {% import
+'label_value_component_template.html' as LabelValueComponent %} {% import
+'graph_components/Individual_graph_2_year_container.html' as
+IndividualGraph2YearContainer %} {% import
+'graph_components/Individual_graph_4_year_container.html' as
+IndividualGraph4YearContainer %}
 
 <head>
   <meta charset="utf-8" />
@@ -15,36 +17,44 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
-{% macro render(GRAPH_DATA={}, AC_NAME="", GRAPH_FORMAT=2, COLORS=COLORS, YEARS_LIST=[], HEADER="") -%} 
-{% for KEY in GRAPH_DATA %} 
-{% for iteration in GRAPH_DATA[KEY] %}
+{% for KEY, iterations in GRAPH_DATA.items() %} {% for iteration in iterations
+%}
 <div class="comparative_analysis_pdf_graph_page page-break">
   {{ Header.render(PAGE_NO="1", TITLE=HEADER, SECOND_TITLE="") }}
 
   <div style="display: flex; gap: 1rem">
-    {{ LabelValueComponent.render(GENDER_DATA=iteration[0]["gender_stats"], AGE_DATA=iteration[0]["age_stats"], number=iteration[0]["booth_no"]) }} 
-    {# #} {# #} {# #} 
-    {{ LabelValueComponent.render(GENDER_DATA=iteration[1]["gender_stats"], AGE_DATA=iteration[1]["age_stats"], number=iteration[1]["booth_no"]) }}
+    {{ LabelValueComponent.render(GENDER_DATA=iteration[0]["gender_stats"],
+    AGE_DATA=iteration[0]["age_stats"], number=iteration[0]["booth_no"]) }} {{
+    LabelValueComponent.render(GENDER_DATA=iteration[1]["gender_stats"],
+    AGE_DATA=iteration[1]["age_stats"], number=iteration[1]["booth_no"]) }}
   </div>
 
   {% if GRAPH_FORMAT == 2 %}
-  <div class="">
-    {{ IndividualGraph2YearContainer.render(BOOTH_DATA=iteration[0], should_display_year=True, COLORS=COLORS, LEVEL_NO=iteration[0]["booth_no"]) }} 
-    {{ IndividualGraph2YearContainer.render(BOOTH_DATA=iteration[1], should_display_year=False, COLORS=COLORS, LEVEL_NO=iteration[1]["booth_no"]) }}
+  <div>
+    {{ IndividualGraph2YearContainer.render(BOOTH_DATA=iteration[0],
+    should_display_year=True, COLORS=COLORS, LEVEL_NO=iteration[0]["booth_no"])
+    }} {{ IndividualGraph2YearContainer.render(BOOTH_DATA=iteration[1],
+    should_display_year=False, COLORS=COLORS, LEVEL_NO=iteration[1]["booth_no"])
+    }}
   </div>
 
   {% elif GRAPH_FORMAT == 4 %}
-  <div class="">
-    {{ IndividualGraph4YearContainer.render(BOOTH_DATA=iteration[0], should_display_year=True, COLORS=COLORS, LEVEL_NO=iteration[0]["booth_no"]) }} 
-    {{ IndividualGraph4YearContainer.render(BOOTH_DATA=iteration[1], should_display_year=False, COLORS=COLORS, LEVEL_NO=iteration[1]["booth_no"]) }}
+  <div>
+    {{ IndividualGraph4YearContainer.render(BOOTH_DATA=iteration[0],
+    should_display_year=True, COLORS=COLORS, LEVEL_NO=iteration[0]["booth_no"])
+    }} {{ IndividualGraph4YearContainer.render(BOOTH_DATA=iteration[1],
+    should_display_year=False, COLORS=COLORS, LEVEL_NO=iteration[1]["booth_no"])
+    }}
   </div>
+
   {% else %}
-  <div class="">TEST</div>
+  <div>TEST</div>
   {% endif %}
 </div>
-{% endfor %} 
-{% endfor %} 
-{%- endmacro %}
+{% endfor %} {% endfor %}

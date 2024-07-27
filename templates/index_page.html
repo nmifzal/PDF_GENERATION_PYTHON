@@ -12,34 +12,38 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
-{% macro render(index_data_pages=[], AC_NAME="", YEARS_LIST=[],HEADER="") -%} {% for index_data in index_data_pages %}
+<body>
+  {% for index_data in index_data_pages %}
+  <div class="comparative_analysis_pdf_index_page page-break">
+    {{ Header.render(PAGE_NO="1", TITLE=HEADER, SECOND_TITLE="") }}
 
-<div class="comparative_analysis_pdf_index_page page-break">
-  {{ Header.render(PAGE_NO="1", TITLE=HEADER, SECOND_TITLE="") }}
-
-  <p style="text-align: center; font-weight: 800">Index</p>
-  <table class="ca_index_table">
-    <thead>
-      <th colspan="2">LOCAL BODY</th>
-      <th colspan="4">BOOTH NO</th>
-      <th colspan="1">TRENDS</th>
-      <th colspan="1">BOOTH COUNTS</th>
-      <th colspan="1">PAGE NO</th>
-    </thead>
-    <tbody>
-      {% for index_item in index_data %}
-      <tr style="color: grey">
-        <td colspan="2">{{ index_item["local_body"] }}</td>
-        <td colspan="4">{{ ", ".join(index_item["booth_list"]) }}</td>
-        <td colspan="1">{{ index_item["trend"] }}</td>
-        <td colspan="1">{{ index_item["booth_count"] }}</td>
-        <td colspan="1">{{ index_item["page_no"] }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-{% endfor %} {%- endmacro %}
+    <p style="text-align: center; font-weight: 800">Index</p>
+    <table class="ca_index_table">
+      <thead>
+        <th colspan="2">LOCAL BODY</th>
+        <th colspan="4">BOOTH NO</th>
+        <th colspan="1">TRENDS</th>
+        <th colspan="1">BOOTH COUNTS</th>
+        <th colspan="1">PAGE NO</th>
+      </thead>
+      <tbody>
+        {% for index_item in index_data %}
+        <tr style="color: grey">
+          <td colspan="2">{{ index_item["local_body"] }}</td>
+          <td colspan="4">{{ ", ".join(index_item["booth_list"]) }}</td>
+          <td colspan="1">{{ index_item["trend"] }}</td>
+          <td colspan="1">{{ index_item["booth_count"] }}</td>
+          <td colspan="1">{{ index_item["page_no"] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</body>
