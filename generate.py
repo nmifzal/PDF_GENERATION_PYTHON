@@ -100,7 +100,7 @@ def generate_all_pdfs():
         "compare_type": "booth",
     }
 
-    response_json = "response_4_year_original.json"
+    response_json = "response_2_year_truncated.json"
 
     components = [
         ("graph", "graph_page.html", "graph.pdf"),
