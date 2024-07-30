@@ -1,7 +1,6 @@
-{% import 'index_page.html' as IndexPage %} 
-{% import 'graph_page.html' as GraphPage %}
-{% import 'summary_page.html' as SummaryPage %}
-{% import 'appendix_page.html' as AppendixPage %}
+{% import 'index_page.html' as IndexPage %} {% import 'graph_page.html' as
+GraphPage %} {% import 'summary_page.html' as SummaryPage %} {% import
+'appendix_page.html' as AppendixPage %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,23 +16,38 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet" /> -->
     <!-- <link
       href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     /> -->
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Tamil:ital@0;1&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tiro+Tamil:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  {# DATA has all the input DATA = { summary_data_pages: , index_data_pages: , graph_data: , AC_NAME: , GRAPH_FORMAT: , } #}
+  {# DATA has all the input DATA = { summary_data_pages: , index_data_pages: ,
+  GRAPH_DATA: , AC_NAME: , GRAPH_FORMAT: , } #}
   <!-- appendix_data_pages -->
   <body>
     <div id="comparative_analysis_pdf_body">
-      {{ SummaryPage.render(summary_data_pages=DATA["summary_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }} 
-      {{ IndexPage.render(index_data_pages=DATA["index_data_pages"], AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }} 
-      {{ GraphPage.render(GRAPH_DATA=DATA["graph_data"], AC_NAME=DATA["AC_NAME"], GRAPH_FORMAT=DATA["GRAPH_FORMAT"], COLORS=COLORS, YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }}
-      {{ AppendixPage.render(appendix_data_pages=DATA["appendix_data_pages"], AC_NAME=DATA["AC_NAME"],  YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }} 
+      {{ SummaryPage.render(summary_data_pages=DATA["summary_data_pages"],
+      AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"],
+      HEADER=DATA["HEADER"]) }} {{
+      IndexPage.render(index_data_pages=DATA["index_data_pages"],
+      AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"],
+      HEADER=DATA["HEADER"]) }} {{
+      GraphPage.render(GRAPH_DATA=DATA["GRAPH_DATA"], AC_NAME=DATA["AC_NAME"],
+      GRAPH_FORMAT=DATA["GRAPH_FORMAT"], COLORS=COLORS,
+      YEARS_LIST=DATA["YEARS_LIST"], HEADER=DATA["HEADER"]) }} {{
+      AppendixPage.render(appendix_data_pages=DATA["appendix_data_pages"],
+      AC_NAME=DATA["AC_NAME"], YEARS_LIST=DATA["YEARS_LIST"],
+      HEADER=DATA["HEADER"]) }}
     </div>
   </body>
 </html>

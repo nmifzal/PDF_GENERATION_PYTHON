@@ -14,6 +14,7 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 components = [
+    # ("Main", "main_template.html", "main_template.pdf"),
     ("summary", "summary_page.html", "summary.pdf"),
     ("index", "index_page.html", "index.pdf"),
     ("graph", "graph_page.html", "graph.pdf"),
@@ -144,7 +145,10 @@ if __name__ == "__main__":
         "compare_type": "booth",
     }
 
-    response_json = "response_4_year_truncated.json"
+    # response_json = "response_2_year_original.json"
+    # response_json = "response_2_year_truncated.json"
+    response_json = "response_4_year_original.json"
+    # response_json = "response_4_year_truncated.json"
 
     COLORS = [
         "ca_graph_component_pink_bg",
@@ -167,7 +171,6 @@ if __name__ == "__main__":
         "HEADER": modelled_data.get("HEADER", ""),
         "COLORS": COLORS,
         "GRAPH_DATA": modelled_data.get("graph_data", {}),
-        "graph_data": modelled_data.get("graph_data", {}),
         "GRAPH_FORMAT": modelled_data.get("GRAPH_FORMAT", 2)
     }
 
